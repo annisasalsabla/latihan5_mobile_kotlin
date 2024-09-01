@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DiskonActivity">
+
+    <EditText
+        android:id="@+id/etTotalBelanja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan total belanja"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Diskon"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvDiskon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diskon yang didapatkan:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+
+
+</LinearLayout>
