@@ -17,20 +17,18 @@
         android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hitung Diskon"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/tvDiskon"
+        android:id="@+id/btnHitungDiskon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Diskon yang didapatkan:"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp" />
+        android:text="Hitung Diskon" />
 
+    <TextView
+        android:id="@+id/tvHasilDiskon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil diskon"
+        android:paddingTop="16dp"
+        android:textSize="18sp" />
 
 
 </LinearLayout>
