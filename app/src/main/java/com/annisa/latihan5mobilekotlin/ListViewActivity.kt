@@ -1,5 +1,6 @@
 package com.annisa.latihan5mobilekotlin
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -10,19 +11,19 @@ import androidx.core.view.WindowInsetsCompat
 
 class ListViewActivity : AppCompatActivity() {
     private lateinit var lv_item: ListView
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_list_view)
-        lv_item = findViewById(R.id.btnlistview)
+        lv_item = findViewById(R.id.btnListView)
 
 
         //listview
         //listview widget -> Adapter -> Data Source (Array List)
 
         //bikin array list
-        val namaHewan =
-            listOf( "Gajah", "Kucing", "Kupu=kupu", "Beruang", "Kelinci", "Kambing", "Sapi")
+        val namaHewan = listOf( "Gajah", "Kucing", "Kupu=kupu", "Beruang", "Kelinci", "Kambing", "Sapi")
         //kita masukkan data array hewan ke adapter
         //android layout ->
         lv_item.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, namaHewan)
