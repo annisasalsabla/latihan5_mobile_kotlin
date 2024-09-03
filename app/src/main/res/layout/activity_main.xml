@@ -55,4 +55,17 @@
         android:text="Ganjil genap"
         android:layout_marginTop="16dp" />
 
+    <Button
+        android:id="@+id/btnPassingData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Passing Data"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List View"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

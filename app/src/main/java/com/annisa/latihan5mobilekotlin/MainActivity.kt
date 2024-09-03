@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         val btnDiskon = findViewById<Button>(R.id.btnDiskon)
         val btnLuasVolume = findViewById<Button>(R.id.btnLuasVolume)
         val btnGanjilGenap = findViewById<Button>(R.id.btnGanjilGenap)
+        val btnPassingData = findViewById<Button>(R.id.btnPassingData)
+        val btnListView = findViewById<Button>(R.id.btnListView)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -39,7 +42,13 @@ class MainActivity : AppCompatActivity() {
         btnGanjilGenap.setOnClickListener {
             startActivity(Intent(this, GanjilGenapActivity::class.java))
         }
-    }
+        btnPassingData.setOnClickListener {
+            startActivity(Intent(this, PassingDataActivity::class.java))
         }
+        btnListView.setOnClickListener {
+            startActivity(Intent(this, ListViewActivity::class.java))
+        }
+    }
+}
 
 
