@@ -11,22 +11,23 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Latihan 5"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pemrograman Mobile"
-        android:textSize="18sp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp" />
+        android:padding="10sp"
+        android:text="- Pemograman Mobile -"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="8sp"
+        android:text="by Annisa Salsabila"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnKonversiSuhu"
@@ -67,5 +68,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="List View"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnReciclyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycle View"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnReciclyBuah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycle Buah"
         android:layout_marginTop="16dp" />
 </LinearLayout>

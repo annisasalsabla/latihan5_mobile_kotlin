@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class ListViewActivity : AppCompatActivity() {
     private lateinit var lv_item: ListView
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +25,20 @@ class ListViewActivity : AppCompatActivity() {
         //listview widget -> Adapter -> Data Source (Array List)
 
         //bikin array list
-        val namaHewan = listOf( "Gajah", "Kucing", "Kupu=kupu", "Beruang", "Kelinci", "Kambing", "Sapi")
+        val namaHewan =
+            listOf("Gajah", "Kucing", "Kupu-kupu", "Beruang", "Kelinci", "Kambing", "Sapi")
         //kita masukkan data array hewan ke adapter
         //android layout ->
         lv_item.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, namaHewan)
+
+
+        //untuk bisa di klik di setiap item
+        lv_item.setOnItemClickListener(){
+                parent,view, position, id ->
+            Toast.makeText(this, "Anda memilih : ${namaHewan[position]}",
+                Toast.LENGTH_SHORT).show()
+
+        }
 
     }
 }
