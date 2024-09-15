@@ -1,15 +1,13 @@
 package com.annisa.latihan5mobilekotlin
-
-
-
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class ListViewActivity : AppCompatActivity() {
+class ListViewActivity: AppCompatActivity() {
 
     // Daftar hewan, deskripsi, dan gambar
     private val animals = arrayOf("Kucing", "Gajah", "Kupu-kupu", "Beruang", "Kelinci", "Kambing", "Sapi")
@@ -33,8 +31,6 @@ class ListViewActivity : AppCompatActivity() {
         "Sapi" to R.drawable.sapi
     )
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
@@ -48,6 +44,10 @@ class ListViewActivity : AppCompatActivity() {
             val description = animalDescriptions[selectedAnimal]
             val imageResId = animalImages[selectedAnimal]
 
+            // Display Toast notification
+            Toast.makeText(this, "Anda memilih: $selectedAnimal", Toast.LENGTH_SHORT).show()
+
+            // Start DescriptionActivity
             val intent = Intent(this, DescriptionActivity::class.java).apply {
                 putExtra("animalName", selectedAnimal)
                 putExtra("animalDescription", description)
